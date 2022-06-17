@@ -10,7 +10,7 @@ I used Flexbox and Grid CSS layout to test my knowledge on both CSS Layout based
 The major challenge I faced was adding the error validation, which I did. I will be glad if it can be improved on. Thanks.
 
 ## Live view
-This project can be viewed live [Here]()
+This project can be viewed live [Here](https://arthurbazz.github.io/responsive-landing-page/)
 
 ## Credits
 This was possible by following Zuri Team training on frontend development and also  googling topics when stuck or confused. 
