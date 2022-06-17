@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Registration form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--===== Document Main Body =====-->
+    <main class="main-container">
+      <!-- Article -->
+      <article class="article-container">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </article>
+      <!-- End of Article -->
+      <!-- Form -->
+      <div class="form-container">
+        <div class="form-title">
+          <p><strong>Try it for 7 days</strong> then $20/mo. thereafter</p>
+        </div>
+        <form
+          action="https://formspree.io/f/xvolypeo"
+          class="form"
+          method="post"
+        >
+          <div
+            class="form-group"
+            id="first-name"
+            data-error="First Name cannot be empty"
+          >
+            <input
+              type="text"
+              name="first-name"
+              id="f-name"
+              class="form-input"
+              placeholder="First Name"
+              required
+            />
+          </div>
+          <div class="form-group" data-error="Last Name cannot be empty">
+            <input
+              type="text"
+              name="last-name"
+              id="l-name"
+              class="form-input"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div class="form-group" data-error="Looks like this is not an email">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-input"
+              placeholder="Email Address"
+              value="example@email.com"
+              required
+            />
+          </div>
+          <div class="form-group" data-error="Password cannot be empty">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-input"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <!-- Submit Button -->
+          <div class="form-group" id="btn-div">
+            <button class="form-input" id="btn">CLIAM YOUR FREE TRIAL</button>
+          </div>
+
+          <div class="form-group">
+            <h6>
+              By clicking the button you are aggreeing to our
+              <span>Terms of Services</span>
+            </h6>
+          </div>
+        </form>
+        <!-- End of form -->
+      </div>
+    </main>
+    <!--===== End of Document Main Body =====-->
+
+    <!--===== Footer =====-->
+    <footer>
+      <!-- JS Script -->
+      <script>
+        document
+          .querySelectorAll(".form-group[data-error] .form-input ")
+          .forEach((inputElement) => {
+            inputElement.addEventListener("input", () =>
+              inputElement.parentElement.removeAttribute("data-error")
+            );
+          });
+      </script>
+    </footer>
+  </body>
+</html>
